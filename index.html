@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SECNOTES · 渗透学习台</title>
+<meta name="description" content="个人网络渗透学习知识库：分类导航、笔记与进度、工具靶场索引、全局检索。" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1117'/%3E%3Cpath d='M16 6l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6l8-4z' fill='none' stroke='%233ddc97' stroke-width='2'/%3E%3Cpath d='M12 16l3 3 5-6' fill='none' stroke='%233ddc97' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#/">
+      <span class="brand-mark">S</span>
+      <span class="brand-text">
+        <strong>SECNOTES</strong>
+        <small>渗透学习台</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav"></nav>
+
+    <div class="side-cats">
+      <div class="side-title">
+        <span>知识分类</span>
+        <a href="#/knowledge" class="side-title-link">全部</a>
+      </div>
+      <div id="side-cats"></div>
+    </div>
+
+    <div class="side-foot">
+      <div class="side-progress" id="side-progress"></div>
+      <div class="side-foot-row">
+        <span class="side-hint">本地存储 · 自动保存</span>
+        <button class="icon-btn" id="theme-btn" title="切换主题" aria-label="切换主题">
+          <span id="theme-icon">☾</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="sidebar-mask" id="sidebar-mask" hidden></div>
+
+  <main class="main" id="main">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="menu-btn" aria-label="打开导航">≡</button>
+      <div class="top-crumb" id="top-crumb"></div>
+      <button class="search-trigger" id="search-trigger" type="button">
+        <span class="search-ico">⌕</span>
+        <span class="search-label">搜索笔记、工具、靶场…</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+    </header>
+
+    <div class="view" id="view"></div>
+  </main>
+</div>
+
+<div class="palette" id="palette" hidden>
+  <div class="palette-box" role="dialog" aria-modal="true" aria-label="全局搜索">
+    <div class="palette-input">
+      <span class="search-ico">⌕</span>
+      <input id="palette-input" type="text" placeholder="搜索笔记、标签、工具、靶场、任务…" autocomplete="off" spellcheck="false" />
+      <kbd>Esc</kbd>
+    </div>
+    <div class="palette-results" id="palette-results"></div>
+    <div class="palette-foot">
+      <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span>
+      <span><kbd>↵</kbd> 打开</span>
+      <span>支持分类名、标签、正文关键词</span>
+    </div>
+  </div>
+</div>
+
+<script src="content/categories.js"></script>
+<script src="content/library.js"></script>
+<script src="content/notes-bundle.js"></script>
+<script src="content/tools.js"></script>
+<script src="content/roadmap.js"></script>
+<script src="content/cheats.js"></script>
+<script src="content/levels.js"></script>
+<script src="assets/markdown.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/toolbox.js"></script>
+<script src="assets/lab.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
